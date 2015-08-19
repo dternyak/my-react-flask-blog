@@ -34,6 +34,10 @@ angular
 
 
             })
+            .when('/resume', {
+                templateUrl: 'app/views/resume.html',
+
+            })
             .when('/posts/:param1', {
                 templateUrl: 'app/views/post.html',
                 controller: 'PostCtrl',
