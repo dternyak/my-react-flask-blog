@@ -1,0 +1,108 @@
+application: moneronews
+version: snapshot
+runtime: python27
+api_version: 1
+
+threadsafe: true
+
+builtins:
+- deferred: on
+- remote_api: on
+
+inbound_services:
+- warmup
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+- name: pycrypto
+  version: latest
+
+handlers:
+- url: /(robots\.txt)
+  static_files: static/\1
+  upload: static/(.*)
+  login: required
+
+- url: /
+  static_files: static/app/index.html
+  upload: static/app/index.html
+
+- url: /login
+  script: routes.application
+  login: admin
+
+- url: /bower_components
+  static_dir: static/bower_components
+
+- url: /app
+  static_dir: static/app
+
+
+- url: /styles
+  static_dir: static/app/styles
+
+- url: /scripts
+  static_dir: static/app/scripts
+
+- url: /images
+  static_dir: static/app/images
+
+
+
+
+
+- url: /login
+  script: routes.application
+
+- url: /get_single_post
+  script: routes.application
+
+- url: /test
+  script: routes.application
+
+- url: /make_post
+  script: routes.application
+
+- url: /create_posts
+  login: admin
+  script: routes.application
+
+- url: /is_logged_in
+  login: admin
+  script: routes.application
+
+- url: /your_posts
+  login: admin
+  script: routes.application
+
+- url: /update_post
+  login: admin
+  script: routes.application
+
+
+skip_files:
+- ^coverage/.*
+- ^coverage_html_report/.*
+- ^migration/.*
+- ^monitor/.*
+- ^export/.*
+- ^pa/.*
+- ^scripts/.*
+- ^snapdeploy.yaml
+- ^images/readme.md
+- ^local/.*
+- ^tests/.*
+- ^simtests/.*
+- ^webapp/.*
+- ^.git/.*
+- ^.idea/.*
+- ^.*~
+- ^.*\.py[co]
+- ^.*\.po
+- ^.*\.pot
+- ^.*\.egg-info
+- ^\.DS_Store.*
+- ^(.*/)?.*static/node_modules/.*
