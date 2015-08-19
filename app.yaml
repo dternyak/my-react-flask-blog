@@ -1,5 +1,5 @@
-application: moneronews
-version: snapshot
+application: dtsimpleblog
+version: snapshot2
 runtime: python27
 api_version: 1
 
