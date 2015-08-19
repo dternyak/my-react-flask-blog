@@ -1,0 +1,17 @@
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #nocolor {
+  	margin-left: 20px;
+  }
+
+@media screen and (max-width: 768px) {
+    #getdotbitimage {
+        width: 310px;
+        height: 170px;
+    }
+}
