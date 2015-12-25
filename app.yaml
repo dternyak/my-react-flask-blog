@@ -57,7 +57,7 @@ handlers:
 - url: /login
   script: routes.application
 
-- url: /get_single_post
+- url: /api/v1/get_single_post
   script: routes.application
 
 - url: /test
@@ -74,7 +74,7 @@ handlers:
   login: admin
   script: routes.application
 
-- url: /your_posts
+- url: /api/v1/your_posts
   login: admin
   script: routes.application
 

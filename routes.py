@@ -22,7 +22,7 @@ application = WSGIApplication(
               handler='handlers.main.AllPostsHandler',
               name='make_posts',
               ),
-        Route(r'/get_single_post',
+        Route(r'/api/v1/get_single_post',
               handler='handlers.main.SinglePostsHandler',
               name='get_single_post',
               ),
