@@ -2,16 +2,13 @@ import React, { Component } from 'react';
 import DocumentMeta from 'react-document-meta';
 
 /* components */
-import Directory from '../../components/Directory/Directory';
+import Portfolio from '../../components/Portfolio/Portfolio';
 
-
-
-
-export class Home extends Component {
+export class PortfolioView extends Component {
     render() {
         return (
             <section>
-                <Directory/>
+                <Portfolio/>
             </section>
         );
     }
