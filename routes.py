@@ -38,7 +38,7 @@ application = WSGIApplication(
               handler='handlers.main.CreatePostsHandler',
               name='CreatePostsHandler',
               ),
-        Route(r'/your_posts',
+        Route(r'/api/v1/your_posts',
               handler='handlers.main.YourPostsHandler',
               name='YourPostsHandler',
               ),

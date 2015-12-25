@@ -24,7 +24,10 @@ class Directory extends Component {
 
                         <div className="col-sm-4">
                             <i className="ion-ios-bookmarks-outline"/>
+                            <Link to="/blog" activeClassName="active">
+
                             <h3>Blog</h3>
+                                </Link>
                         </div>
 
                         <div className="col-sm-4">

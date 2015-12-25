@@ -47,16 +47,13 @@ class Portfolio extends Component {
                         { PROJECTS.map((project, index) =>
                             <div key={index}>
                                 <div className="col-md-10 col-md-offset-1 centered">
+                                    <a target="_blank" href={project.url}><h2>{project.title}</h2></a>
 
-
-                                    <a href={project.url}><h2>{project.title}</h2>
-
-                                        <div className="row-fluid">
-                                            <div className="span12 pagination-centered">
-                                                <img src={project.image} style={{"width": 625, "height": 350}}/>
-                                            </div>
+                                    <div className="row-fluid">
+                                        <div className="span12 pagination-centered">
+                                            <img src={project.image} style={{"width": 625, "height": 350}}/>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                                 <div className="row">
                                     <div className="col-sm-12">
