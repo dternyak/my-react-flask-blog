@@ -7,7 +7,6 @@ import datetime
 
 import logging
 
-from forms.forms import AForm
 from env_setup import BetterHandler as RequestHandler
 from models.models import BlogPost
 
