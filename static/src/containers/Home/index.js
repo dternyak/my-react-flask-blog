@@ -25,9 +25,6 @@ export class Home extends Component {
         return (
             <section>
                 <div id="h">
-                    <div className="logo">
-                        <h2>BASIC</h2>
-                    </div>
                     <div className="container centered">
                         <div className="row">
                             <div className="col-md-8 col-md-offset-2">
@@ -36,20 +33,19 @@ export class Home extends Component {
                         </div>
                         <div className="row mt">
                             <div className="col-sm-4">
-                                <i className="ion-ios7-monitor-outline"/>
+                                <i className="ion-monitor"/>
                                 <h3>Web Design</h3>
                             </div>
 
                             <div className="col-sm-4">
-                                <i className="ion-ios7-browsers-outline"/>
+                                <i className="ion-ios-bookmarks-outline"/>
                                 <h3>UI Development</h3>
                             </div>
 
                             <div className="col-sm-4">
-                                <i className="ion-ios7-copy-outline"/>
+                                <i className="ion-ios-paper-outline"/>
                                 <h3>Brand Identity</h3>
                             </div>
-
                         </div>
                     </div>
                 </div>
