@@ -43,6 +43,9 @@ class MainHandler(RequestHandler):
 
 class SinglePostsHandler(RequestHandler):
     def post(self):
+        self.request.headers['Access-Control-Allow-Origin'] = '*'
+        self.response.headers['Content-Type'] = 'application/json'
+        self.response.headers['Access-Control-Allow-Origin'] = '*'
         loaded_message = json.loads(self.request.body)
         data_id = int(loaded_message["id"])
         qry1 = BlogPost.get_by_id(data_id, parent=None)
@@ -61,6 +64,9 @@ class SinglePostsHandler(RequestHandler):
 
 class UpdatePostsHandler(RequestHandler):
     def post(self):
+        self.request.headers['Access-Control-Allow-Origin'] = '*'
+        self.response.headers['Content-Type'] = 'application/json'
+        self.response.headers['Access-Control-Allow-Origin'] = '*'
         user = users.get_current_user()
 
         loaded_message = json.loads(self.request.body)
@@ -89,14 +95,13 @@ class UpdatePostsHandler(RequestHandler):
 
 class YourPostsHandler(RequestHandler):
     def get(self):
-        print "test"
-        user = users.get_current_user()
+        self.request.headers['Access-Control-Allow-Origin'] = '*'
+        self.response.headers['Content-Type'] = 'application/json'
+        self.response.headers['Access-Control-Allow-Origin'] = '*'
         qry1 = BlogPost.query()  # Retrieve all Account entitites
-        qry2 = qry1.filter(BlogPost.author == user.email())
-
         list_to_return = []
 
-        for item in qry2:
+        for item in qry1:
             body = item.body
             author = item.author
             title = item.title
@@ -111,6 +116,9 @@ class YourPostsHandler(RequestHandler):
 
 class YourPostSpecific(RequestHandler):
     def get(self):
+        self.request.headers['Access-Control-Allow-Origin'] = '*'
+        self.response.headers['Content-Type'] = 'application/json'
+        self.response.headers['Access-Control-Allow-Origin'] = '*'
         print "test"
         user = users.get_current_user()
         qry1 = BlogPost.query()  # Retrieve all Account entitites
@@ -135,6 +143,9 @@ class YourPostSpecific(RequestHandler):
 
 class AllPostsHandler(RequestHandler):
     def get(self):
+        self.request.headers['Access-Control-Allow-Origin'] = '*'
+        self.response.headers['Content-Type'] = 'application/json'
+        self.response.headers['Access-Control-Allow-Origin'] = '*'
         qry1 = BlogPost.query()
         list_to_return = []
 

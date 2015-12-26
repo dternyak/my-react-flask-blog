@@ -21,10 +21,6 @@ libraries:
   version: latest
 
 handlers:
-- url: /(robots\.txt)
-  static_files: static/\1
-  upload: static/(.*)
-  login: required
 
 - url: /
   static_files: static/index.html
@@ -36,13 +32,6 @@ handlers:
 
 - url: /dist
   static_dir: static/dist
-
-
-
-
-
-- url: /login
-  script: routes.application
 
 - url: /api/v1/get_single_post
   script: routes.application
@@ -62,7 +51,6 @@ handlers:
   script: routes.application
 
 - url: /api/v1/your_posts
-  login: admin
   script: routes.application
 
 - url: /update_post

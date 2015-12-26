@@ -51,7 +51,7 @@ class Portfolio extends Component {
 
                                     <div className="row-fluid">
                                         <div className="span12 pagination-centered">
-                                            <img src={project.image} style={{"width": 625, "height": 350}}/>
+                                            <img src={project.image} style={{"width": 625, "height": 350}}  className="img-responsive2"/>
                                         </div>
                                     </div>
                                 </div>
