@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 
 class Directory extends Component {
     render() {
+        const resume_url = "https://drive.google.com/file/d/0B3hYpsXRDCIkX1JzS2ZHWFN0bTA/view?usp=sharing"
         return (
             <div id="h">
                 <div className="container centered">
@@ -31,7 +32,7 @@ class Directory extends Component {
 
                         <div className="col-sm-4">
                             <i className="ion-ios-paper-outline"/>
-                            <a target="_blank" href="https://drive.google.com/file/d/0B3hYpsXRDCIkMWt1T3lPMkZ4MkE/view">
+                            <a target="_blank" href={resume_url}>
 
                                 <h3><b>Rèsumè</b></h3>
                             </a>
