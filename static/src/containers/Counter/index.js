@@ -6,7 +6,7 @@ import * as CounterActions from '../../actions/counter'
 
 @connect(
     state => {
-        return {counter: state.counter}
+        return {counter: state.counter, state: state}
     },
     dispatch => bindActionCreators(CounterActions, dispatch)
 )

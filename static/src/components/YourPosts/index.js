@@ -37,7 +37,7 @@ export class YourPosts extends Component {
                             {
                                 this.state.posts.map((post, index) =>
                                     <div key={index}>
-                                        <a href="#/something">
+                                        <a href={"#/post/" + post.id}>
                                             <h2 className="post-title">
                                                 {post.title}
                                             </h2>

@@ -3,14 +3,20 @@ import DocumentMeta from 'react-document-meta';
 
 /* components */
 import {EachPost} from '../../components/EachPost';
+import { connect } from 'react-redux';
 
+@connect(
+    state => {
+        return {counter: state.counter, state: state}
+    }
+)
 export class EachPostView extends Component {
 
 
     render() {
         return (
             <section>
-                <EachPost/>
+                <EachPost id={this.props.params.id} />
             </section>
         );
     }

@@ -12,29 +12,21 @@ export class EachPost extends Component {
     }
 
     componentDidMount() {
-        console.log("got here")
         console.log(this.props.id);
 
-        get_single_post(data)
+        get_single_post(this.props.id)
             .then((response) => {
                     console.log(response);
-                    console.log(this.props.id);
                     //this.setState({
                     //    post: response.data,
                     //})
                 }
             );
-
-    }
-
-    componentWillMount() {
-        console.log("test")
-    }
-
+     }
     render() {
         return (
             <div className="container">
-                test {this.props.id}
+                test
             </div>
 
         )

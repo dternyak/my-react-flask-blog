@@ -8,6 +8,7 @@ import { List } from 'containers/List';
 import {CounterView} from 'containers/Counter'
 import {PortfolioView} from 'containers/PortfolioView'
 import {BlogView} from 'containers/BlogView'
+import {EachPostView} from 'containers/EachPostView'
 
 export default (
     <Route path="/" component={App}>
@@ -16,7 +17,7 @@ export default (
         <Route path="counter" component={CounterView}/>
         <Route path="portfolio" component={PortfolioView}/>
         <Route path="blog" component={BlogView}/>
-
+        <Route path="post/:id" component={EachPostView}/>
 
     </Route>
 );

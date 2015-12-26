@@ -34,6 +34,10 @@ app.get(/^\/api\/v1\/(.*)/, function api(req, res) {
     proxy.web(req, res, { target: 'http://127.0.0.1:8080' });
 });
 
+app.post(/^\/api\/v1\/(.*)/, function other(req, res) {
+    proxy.web(req, res, { target: 'http://127.0.0.1:8080' });
+});
+
 if (require.main === module) {
     var server = http.createServer(app);
     server.listen(process.env.PORT || 3000, function onListen() {
