@@ -252,3 +252,9 @@ a {
     max-width: 100% !important;
     height: auto !important;
 }
+
+.row.mt h3 {
+    padding-bottom: 75px;
+    font-size: 1.5em;
+
+}

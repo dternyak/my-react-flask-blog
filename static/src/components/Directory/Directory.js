@@ -18,15 +18,14 @@ class Directory extends Component {
                             <i className="ion-monitor"/>
                             <Link to="/portfolio" activeClassName="active">
 
-                                <h3>Portfolio</h3>
+                                <h3><b>Portfolio</b></h3>
                             </Link>
                         </div>
 
                         <div className="col-sm-4">
                             <i className="ion-ios-bookmarks-outline"/>
                             <Link to="/blog" activeClassName="active">
-
-                            <h3>Blog</h3>
+                            <h3><b>Blog</b></h3>
                                 </Link>
                         </div>
 
@@ -34,7 +33,7 @@ class Directory extends Component {
                             <i className="ion-ios-paper-outline"/>
                             <a target="_blank" href="https://drive.google.com/file/d/0B3hYpsXRDCIkMWt1T3lPMkZ4MkE/view">
 
-                                <h3>Rèsumè</h3>
+                                <h3><b>Rèsumè</b></h3>
                             </a>
                         </div>
                     </div>
