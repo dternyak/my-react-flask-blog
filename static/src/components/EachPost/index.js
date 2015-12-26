@@ -16,9 +16,9 @@ export class EachPost extends Component {
 
         get_single_post(this.props.id)
             .then((response) => {
-                    response.data.body = {__html: response.data.body};
+                    response.data.data.body = {__html: response.data.data.body};
                     this.setState({
-                        post: response.data,
+                        post: response.data.data,
                     })
                 }
             );

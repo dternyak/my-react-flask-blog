@@ -18,7 +18,7 @@ export class YourPosts extends Component {
             .then((response) => {
                     console.log(response);
                     this.setState({
-                        posts: response.data,
+                        posts: response.data.data,
                     })
                 }
             );

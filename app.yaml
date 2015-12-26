@@ -1,83 +1,65 @@
+# This file specifies your Python application's runtime configuration
+# including URL routing, versions, static file uploads, etc. See
+# https://developers.google.com/appengine/docs/python/config/appconfig
+# for details.
+
+# TODO: Enter your application id below. If you have signed up
+# using cloud.google.com/console use the "project id" for your application
+# id.
 application: dtsimpleblog
 version: react
 runtime: python27
 api_version: 1
+threadsafe: yes
 
-threadsafe: true
-
-builtins:
-- deferred: on
-- remote_api: on
-
-inbound_services:
-- warmup
-
-libraries:
-- name: webapp2
-  version: latest
-- name: jinja2
-  version: latest
-- name: pycrypto
-  version: latest
+# Handlers define how to route requests to your application.
 
 handlers:
-
 - url: /
   static_files: static/index.html
   upload: static/index.html
 
-- url: /login
-  script: routes.application
-  login: admin
-
 - url: /dist
   static_dir: static/dist
 
-- url: /api/v1/get_single_post
-  script: routes.application
 
-- url: /test
-  script: routes.application
+# This handler tells app engine how to route requests to a WSGI application.
+# The script value is in the format <path.to.module>.<wsgi_application>
+# where <wsgi_application> is a WSGI application object.
+- url: .*  # This regex directs all routes to main.app
+  script: index.app
+  secure: always
 
-- url: /make_post
-  script: routes.application
-
-- url: /create_posts
-  login: admin
-  script: routes.application
-
-- url: /is_logged_in
-  login: admin
-  script: routes.application
-
-- url: /api/v1/your_posts
-  script: routes.application
-
-- url: /update_post
-  login: admin
-  script: routes.application
+# Third party libraries that are included in the App Engine SDK must be listed
+# here if you want to use them.  See
+# https://developers.google.com/appengine/docs/python/tools/libraries27 for
+# a list of libraries included in the SDK.  Third party libs that are *not* part
+# of the App Engine SDK don't need to be listed here, instead add them to your
+# project directory, either as a git submodule or as a plain subdirectory.
+# TODO: List any other App Engine SDK libs you may need here.
+libraries:
+- name: jinja2
+  version: 2.6
+- name: pycrypto
+  version: 2.6
 
 
 skip_files:
 - ^coverage/.*
-- ^coverage_html_report/.*
-- ^migration/.*
-- ^monitor/.*
-- ^export/.*
-- ^pa/.*
-- ^scripts/.*
-- ^snapdeploy.yaml
-- ^images/readme.md
-- ^local/.*
-- ^tests/.*
-- ^simtests/.*
-- ^webapp/.*
-- ^.git/.*
 - ^.idea/.*
-- ^.*~
+- ^.git/.*
 - ^.*\.py[co]
 - ^.*\.po
+- ^.*\.md
 - ^.*\.pot
 - ^.*\.egg-info
 - ^\.DS_Store.*
-- ^(.*/)?.*static/node_modules/.*
+- ^static/bower_components/.*
+- ^static/node_modules/.*
+- ^static/dev/.*
+- ^static/.tmp/.*
+- ^static/e2e/.*
+- ^static/gulp/.*
+- ^venv/.*
+- ^venv2/.*
+- ^google_appengine/.*
