@@ -1,5 +1,5 @@
 application: dtsimpleblog
-version: snapshot2
+version: react
 runtime: python27
 api_version: 1
 
