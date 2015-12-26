@@ -1,43 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="abfaecbf-255f-4453-8632-ad7464fd0758" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/AddItem/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/AddItem/styles/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/AddItem/styles/styles.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Counter/Counter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Counter/styles/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Counter/styles/styles.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Items/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Items/styles/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Items/styles/styles.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Projects/files/AndreyKeske.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Projects/files/Landed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Projects/files/mike.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Projects/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Projects/styles/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Projects/styles/styles.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Tools/files/babel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Tools/files/bootstrap.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Tools/files/mocha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Tools/files/reactjs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Tools/files/redux.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Tools/files/webpack.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Tools/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Tools/styles/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/Tools/styles/styles.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/TopImage/files/nyc.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/TopImage/files/top.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/TopImage/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/TopImage/styles/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/components/TopImage/styles/styles.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/containers/Counter/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/src/containers/List/index.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/dist/bundle.js" afterPath="$PROJECT_DIR$/static/dist/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/dist/bundle.js.map" afterPath="$PROJECT_DIR$/static/dist/bundle.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/src/routes.js" afterPath="$PROJECT_DIR$/static/src/routes.js" />
-    </list>
+    <list default="true" id="abfaecbf-255f-4453-8632-ad7464fd0758" name="Default" comment="" />
     <ignored path="DanielTernyak.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -471,20 +435,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DanielTernyak.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="danielternyak.comv2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="handlers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>

@@ -9,7 +9,7 @@ class Directory extends Component {
                     <div className="row">
                         <div className="col-md-8 col-md-offset-2">
                             <h1>Hello, my name is <b>Daniel Ternyak</b>.<br/>I create web applications with
-                                <b> Python</b> and <b>Javascript</b> on the <b>Cloud.</b></h1>
+                                <b> Python</b> and <b>JavaScript</b> on the <b>Cloud.</b></h1>
                         </div>
                     </div>
                     <div className="row mt">
