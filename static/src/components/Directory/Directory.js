@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 class Directory extends Component {
     render() {
-        const resume_url = "https://drive.google.com/file/d/0B3hYpsXRDCIkX1JzS2ZHWFN0bTA/view?usp=sharing"
+        const resume_url = "https://drive.google.com/file/d/0B3hYpsXRDCIkRUV4UTJlbXNMYTA/view?usp=sharing"
         return (
             <div id="h">
                 <div className="container centered">
