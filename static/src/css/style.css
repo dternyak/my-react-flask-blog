@@ -258,3 +258,14 @@ a {
     font-size: 1.5em;
 
 }
+
+
+
+.navbar-default {
+    background: white !important;
+    border-bottom-color: white !important;
+}
+
+.navbar-collapse.collapse a {
+    color: black !important;
+}
