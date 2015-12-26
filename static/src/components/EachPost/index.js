@@ -7,7 +7,7 @@ export class EachPost extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            post: []
+            post: [],
         }
     }
 
@@ -16,18 +16,35 @@ export class EachPost extends Component {
 
         get_single_post(this.props.id)
             .then((response) => {
-                    console.log(response);
-                    //this.setState({
-                    //    post: response.data,
-                    //})
+                    response.data.body = {__html: response.data.body};
+                    this.setState({
+                        post: response.data,
+                    })
                 }
             );
-     }
+    }
+
     render() {
+        const post = this.state.post;
         return (
             <div className="container">
-                test
+                <div className="row">
+                    <div className="col-lg-8">
+                        <h1>{post.title}</h1>
+
+                        <p className="lead">
+                            by: {post.author}
+                        </p>
+                        <hr/>
+                        <p> Posted on {post.time} </p>
+                        <hr/>
+                        <div dangerouslySetInnerHTML={post.body}></div>
+                    </div>
+                </div>
+
+
             </div>
+
 
         )
     }
