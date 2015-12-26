@@ -27,28 +27,15 @@ handlers:
   login: required
 
 - url: /
-  static_files: static/app/index.html
-  upload: static/app/index.html
+  static_files: static/index.html
+  upload: static/index.html
 
 - url: /login
   script: routes.application
   login: admin
 
-- url: /bower_components
-  static_dir: static/bower_components
-
-- url: /app
-  static_dir: static/app
-
-
-- url: /styles
-  static_dir: static/app/styles
-
-- url: /scripts
-  static_dir: static/app/scripts
-
-- url: /images
-  static_dir: static/app/images
+- url: /dist
+  static_dir: static/dist
 
 
 
