@@ -2,6 +2,8 @@ import React, { Component, PropTypes } from 'react'
 
 const monerowallet = require('./images/monerowallet.png');
 const bitzipped = require('./images/bitzipped.png');
+const cryptoindex = require('./images/cryptoindex.png');
+
 
 const PROJECTS = [
     {
@@ -30,6 +32,16 @@ const PROJECTS = [
         the content that expires after the download.`
 
 
+    },
+    {
+        url: "http://cryptoindex.com",
+        image: cryptoindex,
+        title: "CryptoIndex",
+        description: `CryptoIndex is a dashboard for viewing CryptoCurrency prices.
+        It uses data from CoinMarketCap retrieved via Web Scrapers and exposed via an API.
+        The site is hosted on Google App Engine. `
+
+
     }
 ]
 
@@ -38,20 +50,22 @@ class Portfolio extends Component {
     render() {
         return (
             <div>
-                <section id="portfolio" className="bg-light-gray">
+                <section id="portfolio" className="bg-light-gray" style={{marginBottom: 100}}>
                     <div className="container centered">
                         <h1><b>Portfolio</b></h1>
+                        <hr/>
                     </div>
                     <div className="container">
 
                         { PROJECTS.map((project, index) =>
                             <div key={index}>
                                 <div className="col-md-10 col-md-offset-1 centered">
-                                    <a target="_blank" href={project.url}><h2>{project.title}</h2></a>
+                                    <a target="_blank" href={project.url}><h2><b> {project.title} </b></h2></a>
 
                                     <div className="row-fluid">
                                         <div className="span12 pagination-centered">
-                                            <img src={project.image} style={{"width": 625, "height": 350}}  className="img-responsive2"/>
+                                            <img src={project.image} style={{"width": 625, "height": 350}}
+                                                 className="img-responsive2"/>
                                         </div>
                                     </div>
                                 </div>
@@ -63,6 +77,8 @@ class Portfolio extends Component {
 
                                     </div>
                                 </div>
+                                <hr/>
+
                             </div>
                         )
                         }
