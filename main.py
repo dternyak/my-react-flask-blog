@@ -30,9 +30,14 @@ def your_posts():
         author = item.author
         title = item.title
         the_time = item.time
+        the_real_time = datetime.datetime.strptime(the_time, '%B %d, %Y')
         item_id = item.key.id()
-        dict_to_append = {"body": body, "author": author, "title": title, "time": the_time, "id": item_id}
+        dict_to_append = {"body": body, "author": author, "title": title, "time": the_real_time, "id": item_id}
         list_to_return.append(dict_to_append)
+
+    list_to_return.sort(key=lambda r: r["time"])
+
+    list_to_return.reverse()
 
     return jsonify(data=list_to_return)
 

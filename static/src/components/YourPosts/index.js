@@ -19,8 +19,16 @@ export class YourPosts extends Component {
         setTimeout(() => {
             get_posts()
                 .then((response) => {
+
+                        let posts = response.data.data;
+
+                        //change from string into string date objects
+                        for (var i = 0; i < posts.length; i++) {
+                            posts[i].time = new Date(posts[i].time)
+                        }
+
                         this.setState({
-                            posts: response.data.data,
+                            posts: posts,
                             loading: false
                         })
                     }
@@ -49,7 +57,7 @@ export class YourPosts extends Component {
                                                     </h2>
                                                 </a>
 
-                                                <p className="post-meta">Posted by {post.author } on {post.time}</p>
+                                                <p className="post-meta">Posted by {post.author} on {(post.time.getMonth() + 1) + "-" + post.time.getDate() + "-" + post.time.getFullYear()}</p>
                                                 <hr/>
                                             </div>
                                         )
