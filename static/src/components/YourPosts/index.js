@@ -57,7 +57,7 @@ export class YourPosts extends Component {
                                                     </h2>
                                                 </a>
 
-                                                <p className="post-meta">Posted by {post.author} on {(post.time.getMonth() + 1) + "-" + post.time.getDate() + "-" + post.time.getFullYear()}</p>
+                                                <p className="post-meta">Posted by {post.author} on {(post.time.getMonth() + 1) + "-" + (post.time.getDate() + 1) + "-" + post.time.getFullYear()}</p>
                                                 <hr/>
                                             </div>
                                         )
