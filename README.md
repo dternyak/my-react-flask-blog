@@ -1,5 +1,5 @@
 <h1>React-Flask Blog</h1>
-<h3>This blog uses the wonderful <a href="https://github.com/anorudes/redux-easy-boilerplate">Redux Easy Boilerplate</h3>
+<h3>This blog uses the wonderful <a href="https://github.com/anorudes/redux-easy-boilerplate">Redux Easy Boilerplate</a></h3>
 <h4>To create locally:</h2>
 <ul>
 <li>Make sure you have the <a href="https://cloud.google.com/appengine/downloads?hl=en">Google App Engine SDK</a> installed</a></li>
