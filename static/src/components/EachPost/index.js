@@ -13,15 +13,18 @@ export class EachPost extends Component {
     }
 
     componentDidMount() {
-        get_single_post(this.props.id)
-            .then((response) => {
-                    response.data.data.body = {__html: response.data.data.body};
-                    this.setState({
-                        post: response.data.data,
-                        loading: false
-                    })
-                }
-            );
+        setTimeout(() => {
+            get_single_post(this.props.id)
+                .then((response) => {
+                        response.data.data.body = {__html: response.data.data.body};
+                        this.setState({
+                            post: response.data.data,
+                            loading: false
+                        })
+                    }
+                );
+        }, 1000);
+
     }
 
     render() {

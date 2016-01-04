@@ -16,14 +16,16 @@ export class YourPosts extends Component {
     }
 
     componentDidMount() {
-        get_posts()
-            .then((response) => {
-                    this.setState({
-                        posts: response.data.data,
-                        loading: false
-                    })
-                }
-            );
+        setTimeout(() => {
+            get_posts()
+                .then((response) => {
+                        this.setState({
+                            posts: response.data.data,
+                            loading: false
+                        })
+                    }
+                );
+        }, 1000);
 
     }
 
