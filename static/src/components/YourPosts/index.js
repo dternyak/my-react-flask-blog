@@ -25,7 +25,7 @@ export class YourPosts extends Component {
                         })
                     }
                 );
-        }, 1000);
+        }, 500);
 
     }
 

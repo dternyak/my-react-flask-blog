@@ -23,7 +23,7 @@ export class EachPost extends Component {
                         })
                     }
                 );
-        }, 1000);
+        }, 500);
 
     }
 
