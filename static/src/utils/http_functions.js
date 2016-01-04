@@ -12,3 +12,11 @@ export function get_single_post(post) {
         }
     )
 }
+
+export function create_post(title, body) {
+    return axios.post('/api/v1/create_post', {
+            title: title,
+            body: body
+        }
+    )
+}

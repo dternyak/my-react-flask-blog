@@ -33,6 +33,9 @@ module.exports = {
     resolve: {
         extensions: ['', '.jsx', '.js', '.json'],
         modulesDirectories: ['node_modules', 'src'],
+        alias: {
+            alloyeditor: '../../node_modules/alloyeditor/dist/alloy-editor/alloy-editor-all.js'
+        }
     },
 
     module: {
