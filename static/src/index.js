@@ -10,6 +10,7 @@ import { syncReduxAndRouter } from 'redux-simple-router';
 const store = configureStore();
 
 import 'css/style.css'
+import 'css/loading.css'
 
 
 const history = createHistory();

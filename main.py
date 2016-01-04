@@ -1,4 +1,5 @@
 from flask import request, jsonify, Blueprint, redirect, url_for, g
+import time
 
 from models import BlogPost
 
@@ -13,9 +14,9 @@ def get_single_post():
     body = qry1.body
     author = qry1.author
     title = qry1.title
-    time = qry1.time
+    the_time = qry1.time
     id = qry1.key.id()
-    dict_to_append = {"body": body, "author": author, "title": title, "time": time, "id": id}
+    dict_to_append = {"body": body, "author": author, "title": title, "time": the_time, "id": id}
     return jsonify(data=dict_to_append)
 
 
@@ -28,9 +29,9 @@ def your_posts():
         body = item.body
         author = item.author
         title = item.title
-        time = item.time
+        the_time = item.time
         item_id = item.key.id()
-        dict_to_append = {"body": body, "author": author, "title": title, "time": time, "id": item_id}
+        dict_to_append = {"body": body, "author": author, "title": title, "time": the_time, "id": item_id}
         list_to_return.append(dict_to_append)
 
     return jsonify(data=list_to_return)

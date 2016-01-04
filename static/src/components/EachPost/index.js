@@ -8,17 +8,17 @@ export class EachPost extends Component {
         super(props);
         this.state = {
             post: [],
+            loading: true
         }
     }
 
     componentDidMount() {
-        console.log(this.props.id);
-
         get_single_post(this.props.id)
             .then((response) => {
                     response.data.data.body = {__html: response.data.data.body};
                     this.setState({
                         post: response.data.data,
+                        loading: false
                     })
                 }
             );
@@ -27,23 +27,28 @@ export class EachPost extends Component {
     render() {
         const post = this.state.post;
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-8">
-                        <h1>{post.title}</h1>
+            <div>
+                {this.state.loading ? <div className="loader">Loading...</div> :
+                    <div className="container" style={{"marginTop": -50, "marginBottom": 50}}>
+                        <div className="row">
+                            <div className="col-lg-8">
+                                <h1><b>{post.title}</b></h1>
 
-                        <p className="lead">
-                            by: {post.author}
-                        </p>
-                        <hr/>
-                        <p> Posted on {post.time} </p>
-                        <hr/>
-                        <div dangerouslySetInnerHTML={post.body}></div>
+                                <p className="lead">
+                                    by: {post.author}
+                                </p>
+                                <hr/>
+                                <p> Posted on {post.time} </p>
+                                <hr/>
+                                <div dangerouslySetInnerHTML={post.body}></div>
+                            </div>
+                        </div>
+
+
                     </div>
-                </div>
+                }
+            </div >
 
-
-            </div>
 
 
         )

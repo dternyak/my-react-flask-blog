@@ -7,7 +7,7 @@ import {YourPosts} from '../../components/YourPosts';
 
 @connect(
     state => {
-        return {counter: state.counter, state: state}
+        return {state: state}
     }
 )
 export class BlogView extends Component {

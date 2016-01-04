@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 
 @connect(
     state => {
-        return {counter: state.counter, state: state}
+        return {state: state}
     }
 )
 export class EachPostView extends Component {

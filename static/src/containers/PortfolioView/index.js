@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import Portfolio from '../../components/Portfolio/Portfolio';
 @connect(
     state => {
-        return {counter: state.counter, state: state}
+        return  {state: state}
     }
 )
 export class PortfolioView extends Component {
