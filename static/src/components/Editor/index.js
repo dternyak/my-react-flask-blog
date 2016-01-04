@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {create_post} from '../../utils/http_functions'
+import {create_post, is_admin} from '../../utils/http_functions'
 
 
 export class Editor extends Component {
@@ -8,24 +8,9 @@ export class Editor extends Component {
         super(props);
         this.state = {
             content: null,
-            title: null
+            title: null,
+            loading: true
         }
-    }
-
-    componentDidMount() {
-        var that = this
-        var basicEditor = new Quill('#editor', {
-            theme: 'snow'
-        });
-        basicEditor.addModule('toolbar', {
-            container: '.toolbar'
-        });
-        basicEditor.on('text-change', function () {
-            var html = basicEditor.getHTML();
-            that.setState({
-                content: html
-            })
-        });
     }
 
     editorConfig() {
@@ -156,13 +141,45 @@ export class Editor extends Component {
         )
     }
 
+    componentDidMount() {
+        is_admin()
+            .then(() => {
+
+                this.setState({
+                    loading: false
+                })
+
+                var that = this;
+                var basicEditor = new Quill('#editor', {
+                    theme: 'snow'
+                });
+                basicEditor.addModule('toolbar', {
+                    container: '.toolbar'
+                });
+                basicEditor.on('text-change', function () {
+                    var html = basicEditor.getHTML();
+                    that.setState({
+                        content: html
+                    })
+                });
+            })
+            .catch((err) => {
+                document.location.href = "/";
+            })
+    }
+
     onSubmit() {
         const final_submission = {title: this.state.title, content: this.state.content};
 
         if (final_submission.title && final_submission.content) {
+            this.setState({
+                loading: true
+            })
             create_post(final_submission.title, final_submission.content)
                 .then((res) => {
-                    console.log(res)
+                    this.setState({
+                        loading: false
+                    })
                 });
         }
     }
@@ -177,22 +194,27 @@ export class Editor extends Component {
 
     render() {
         return (
-            <div className="container text-center">
-                <div className="col-md-6 col-md-offset-3">
+            <div>
+                {this.state.loading ? <div className="loader">Loading...</div> :
+                    <div className="container text-center">
+                        <div className="col-md-6 col-md-offset-3">
 
-                    <h2>Title
-                        <input type="text" className="form-control text-center"
-                               onChange={(e) => this.onChangeTitle(e)}/>
-                    </h2>
-                </div>
+                            <h2>Title
+                                <input type="text" className="form-control text-center"
+                                       onChange={(e) => this.onChangeTitle(e)}/>
+                            </h2>
+                        </div>
 
-                <button type="button" className="btn btn-default" onClick={() => this.onSubmit()}>Submit</button>
+                        <button type="button" className="btn btn-default" onClick={() => this.onSubmit()}>Submit
+                        </button>
 
-                <div className="col-md-8 col-md-offset-2">
+                        <div className="col-md-8 col-md-offset-2">
 
-                    {this.editorConfig()}
+                            {this.editorConfig()}
 
-                </div>
+                        </div>
+                    </div>
+                }
             </div>
 
 

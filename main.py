@@ -1,7 +1,7 @@
 from flask import request, jsonify, Blueprint, redirect, url_for, g
-import time
 import datetime
 from models import BlogPost
+from google.appengine.api import users
 
 api = Blueprint('api', __name__, url_prefix='/api/v1')
 
@@ -37,7 +37,7 @@ def your_posts():
     return jsonify(data=list_to_return)
 
 
-@api.route('/create_post', methods=["POST"])
+@api.route('/create_post', methods=["POST", "GET"])
 def make_post():
     loaded_message = request.get_json()
 
@@ -49,11 +49,22 @@ def make_post():
     author = "DTernyak@gmail.com"
 
     insert_payload = BlogPost(
-        time=fixed_time,
-        body=body,
-        title=title,
-        author=author,
+            time=fixed_time,
+            body=body,
+            title=title,
+            author=author,
     )
 
     insert_payload.put()
     return jsonify(success=True)
+
+
+@api.route('/login')
+def login():
+    login_url = users.create_login_url('/#/editor')
+    return redirect(login_url)
+
+
+@api.route('/is_admin')
+def is_admin():
+    return jsonify(result=True)
